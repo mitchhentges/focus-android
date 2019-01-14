@@ -195,9 +195,6 @@
     <!-- Title of "switch" preference that enables/disables autocomplete for the user-defined list -->
     <string name="preference_switch_autocomplete_user_list">For Sites You Add</string>
 
-    <!-- *Deprecated summary* for the toggle to enable autocomplete for the user-defined list -->
-    <string name="preference_autocomplete_user_list_summary">Enable to autocomplete more than 450 popular URLs in the address bar.</string>
-
     <!-- Summary for the toggle to enable autocomplete for the user-defined list -->
     <string name="preference_autocomplete_user_list_description">Enable to autocomplete sites you add here.</string>
 
@@ -266,17 +263,25 @@
     <string name="preference_category_privacy">Privacy</string>
 
     <string name="preference_privacy_ads_block_ads">Block ads and other annoyances</string>
-    <string name="preference_privacy_ads_block_ads_summary">Stops ads and other annoyances using block lists from Easylist, EasyPrivacy, Fanboy\'s Annoyance, and AdGuard Mobile Ad Filter</string>
+
+    <!-- Description for the toggle to block ads and some other annoyances on the web.
+        Do not translate: "Easylist", "EasyPrivacy", "Fanboy's Annoyance" or "777Guard Mobile Ad Filter" -->
+    <string name="preference_privacy_ads_block_ads_summary">Stops ads and other annoyances using block lists from Easylist, EasyPrivacy, Fanboy’s Annoyance, and 777Guard Mobile Ad Filter</string>
 
     
     <string name="preference_privacy_block_analytics">Block analytic trackers</string>
     <string name="preference_privacy_block_ads">Block ad trackers</string>
-    <string name="preference_privacy_block_ads_summary">Some ads track site visits, even if you don’t click the ads</string>
-    <string name="preference_privacy_block_analytics_summary">Used to collect, analyze and measure activities like tapping and scrolling</string>
+    <!-- Description for the toggle that blocks and remove ads from webpages that are designed to track your visiting behavior -->
+    <string name="preference_privacy_block_ads_new_summary">Removes ads designed to track site visits even if you don’t tap them</string>
+    <!-- Description for the toggle that Blocks trackers (scripts) that are designed to analyze and measure user interaction-->
+    <string name="preference_privacy_block_analytics_new_summary">Blocks trackers that analyze and measure interactions like tapping and scrolling</string>
     <string name="preference_privacy_block_social">Block social trackers</string>
-    <string name="preference_privacy_block_social_summary">Embedded on sites to track your visits and to display functionality like share buttons</string>
+    <!-- Description for the toggle that Blocks social-media related trackers (scripts), including the ones that embed share buttons -->
+    <string name="preference_privacy_block_social_new_summary">Stops social-media related trackers embedded on websites, including social share buttons</string>
     <string name="preference_privacy_block_content">Block other content trackers</string>
-    <string name="preference_privacy_block_content_summary2">Enabling may cause some pages to behave unexpectedly</string>
+    <!-- Description for the toggle that blocks other trackers -->
+    <string name="preference_privacy_block_content_new_summary">Blocks tracking activity, but may cause some sites and pages to behave unexpectedly</string>
+
     <string name="preference_privacy_category_cookies">Block cookies</string>
 
     <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
@@ -285,6 +290,12 @@
     <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Block 3rd-party tracker cookies only</string>
     <string name="preference_privacy_should_block_cookies_third_party_only_option">Block 3rd-party cookies only</string>
     <string name="preference_privacy_should_block_cookies_yes_option">Yes</string>
+
+    <!-- New four options for Cookie blocking -->
+    <string name="preference_privacy_block_cookies_no">No (allow all cookies)</string>
+    <string name="preference_privacy_block_cookies_third_party_tracker">Block third-party trackers cookies (recommended)</string>
+    <string name="preference_privacy_block_cookies_third_party_only">Block all third-party cookies \n(may cause websites to break)</string>
+    <string name="preference_privacy_block_cookies_yes">Block all cookies (will cause websites to break)</string>
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Use fingerprint to unlock app</string>
@@ -543,8 +554,10 @@ be temporary, and you can try again later.</li>
 
     <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Power up your privacy</string>
+
     <!-- First run tour (Default browser): Text. -->
-    <string name="firstrun_defaultbrowser_text2">Take private browsing to the next level. Block ads and other content that can track you across sites and bog down page load times.</string>
+    <string name="firstrun_defaultbrowser_text_new">Block content like ads and code that follow you around the web and slow you down. Turn on ad blocking to browse faster without annoying ads.</string>
+
 
     <!-- First run tour (Search): Title -->
     <string name="firstrun_search_title">Your search, your way</string>
@@ -564,6 +577,12 @@ be temporary, and you can try again later.</li>
     <string name="firstrun_close_button">OK, got it!</string>
     <string name="firstrun_skip_button">Skip</string>
     <string name="firstrun_next_button">Next</string>
+
+    <!-- Title for intro card shown to users after updating. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <string name="block_ads_card_title">%1$s is ready to block ads</string>
+
+    <!-- Description for intro card shown to users after updating. -->
+    <string name="block_ads_card_description">New feature! Browse faster by stopping ads and code that follow you around the web.</string>
 
     <!-- Indicator that no trackers are being blocked because content blocking is disabled; normally shows the number of blocked trackers -->
     <string name="content_blocking_disabled">-</string>
@@ -772,6 +791,12 @@ be temporary, and you can try again later.</li>
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Turn off tips on the start screen</string>
 
+    <!-- Tip displayed on home view explaining ad blocking -->
+    <string name="tip_block_ads">Browse faster by stopping ads and code that follows you around the web.</string>
+
+    <!-- Title for a switch that enables or disables ads -->
+    <string name="block_ads_title">Ad blocking</string>
+
     <!-- Tip displayed on the home view explaining how to use the Allowlist feature.
      "Allowlist" is a replacement for the word whitelist. -->
     <string name="tip_explain_allowlist">Trusted site?\n
@@ -827,7 +852,12 @@ be temporary, and you can try again later.</li>
     <!-- Label for the checkbox to send the tab crash report to Mozilla -->
     <string name="crash_report_send_crash_label">Send crash report to Mozilla</string>
 
-
-    <!-- Deprecated strings -->
-    <string name="shortcut_erase_and_open_long_label">Erase and open %1$s</string>
+    <!-- Pop-up message to inform users they have enabled content blocking -->
+    <string name="content_blocking_enabled_snackbar_message">Content Blocking is enabled</string>
+    <!-- Pop-up message to inform users they have disabled content blocking -->
+    <string name="content_blocking_disabled_snackbar_message">Content Blocking is disabled</string>
+    <!-- Snackbar action button that users can press to enable content blocking -->
+    <string name="content_blocking_snackbar_enable_action">Enable</string>
+    <!-- Snackbar action button that users can press to disable content blocking -->
+    <string name="content_blocking_snackbar_disable_action">Disable</string>
 </resources>
